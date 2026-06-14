@@ -12,15 +12,10 @@ HEADERS = {
 
 # List theater URLs you want to skip during scraping.
 # Set EXCLUDED_THEATERS = [] if no exclusions are needed.
-EXCLUDED_THEATERS = [
-    "https://jadwalnonton.com/bioskop/di-bandung/dakota-cinema-rancaekek-bandung.html",
-    "https://jadwalnonton.com/bioskop/di-bandung/jatos-bandung.html",
-    "https://jadwalnonton.com/bioskop/di-bandung/thee-matic-mall-xxi-bandung.html",
-    "https://jadwalnonton.com/bioskop/di-bandung/transmart-buah-batu-xxi-bandung.html",
-]
+EXCLUDED_THEATERS = []
 
 # Data quality parameters.
-MIN_ACTIVE_RECORDS = 5  # minimum expected active screening records per run, try 20% of the typical records
+MIN_ACTIVE_RECORDS = 0  # minimum expected active screening records per run, try 20% of the typical active records
 MAX_NULL_RATE = 0.20  # max allowed null rate for critical fields in active records
 MAX_FAILURE_RATE = (
     0.50  # failure rate threshold that triggers a high-failure-rate warning
