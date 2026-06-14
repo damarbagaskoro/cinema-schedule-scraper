@@ -142,13 +142,13 @@ These are bad individual records, not structural failures. The CSV is still save
 
 ## Known Assumptions & Limitations
 
-- **Source dependency:** The scraper is tightly coupled to jadwalnonton.com's HTML structure. If the site changes its layout, parsing will break and the output will degrade. This is detected indirectly — through rising null rates or falling record counts — not directly. Silent parser failures where wrong-but-non-null data is extracted are a known blind spot.
+- **Source dependency:** The scraper is tightly coupled to jadwalnonton.com's HTML structure. If the site changes its layout, parsing will break and the output will degrade. This is detected indirectly through rising null rates or falling record counts. Silent parser failures where wrong-but-non-null data is extracted are a known blind spot.
 - **Daily cadence:** This scraper is designed to run once per day. Running it multiple times on the same day will overwrite the existing CSV for that date. There is no duplicate-run protection.
 - **Genre:** Only the first listed genre per film is stored. If a film is listed as `Animation, Adventure, Comedy`, only `Animation` is recorded.
 - **Inactive theaters:** Theaters with no screenings today are recorded as a single row with `theater_status = inactive` and all film fields set to null. They are excluded from data quality threshold checks.
 ---
 
-## Context: Where This Fits in the Production Pipeline
+## Context: Where This Scraper Fits in the Larger Pipeline
 
 As mentioned above, this scraper is originally designed as part of an ingestion layer for a larger film screening intelligence system. The full pipeline is:
 

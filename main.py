@@ -29,7 +29,7 @@ logging.basicConfig(
 
 
 # ====================================
-# PIPELINE
+# LOG SUMMARY
 # ====================================
 
 
@@ -48,6 +48,11 @@ def _log_summary(
                 f"This likely indicates a network or site-level problem, not isolated page errors. "
                 f"Manually open the failed URLs in a browser to investigate."
             )
+
+
+# ====================================
+# MAIN PIPELINE
+# ====================================
 
 
 def run_scraper() -> bool:
